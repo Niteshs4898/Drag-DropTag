@@ -6,22 +6,22 @@ const App = () => {
   const [Data, SetData] = useState(true); // it hide the tag from screen on submit the details
   const [down, setdown] = useState(false);  // it show the download data
   const [up, setup] = useState(false); 
-  const [first, setfirst] = useState(false);
-  const [second, setsecond] = useState(false);
-  const [third, setthird] = useState(false);
-  const [fifth, setfifth] = useState(false);
-  const [six, setsix] = useState(false);
-  const [seven, setseven] = useState(false);
-  const [eight, seteight] = useState(false);
-  const [shows, setshows] = useState([]);
+  const [first, setfirst] = useState(false);  // it show the data when it true
+  const [second, setsecond] = useState(false);  // it show the data when it true
+  const [third, setthird] = useState(false);   // it show the data when it true
+  const [fifth, setfifth] = useState(false);  // it show the data when it true
+  const [six, setsix] = useState(false);     // it show the data when it true
+  const [seven, setseven] = useState(false);   // it show the data when it true
+  const [eight, seteight] = useState(false);  // it show the data when it true
+  const [shows, setshows] = useState([]);   // storing tag with data
   const [set, subSet] = useState([]); // for storing a on tags onDropEnd function
-  const [firstV, setfirstV] = useState([]);
-  const [secondV, setsecondV] = useState([]);
-  const [thirdV, setthirdV] = useState([]);
-  const [fifthV, setfifthV] = useState([]);
-  const [sixV, setsixV] = useState([]);
-  const [sevenV, setsevenV] = useState([]);
-  const [eightV, seteightV] = useState([]);
+  const [firstV, setfirstV] = useState([]);  // it store the value from the input
+  const [secondV, setsecondV] = useState([]);  // it store the value from the input
+  const [thirdV, setthirdV] = useState([]);   // it store the value from the input
+  const [fifthV, setfifthV] = useState([]);   // it store the value from the input
+  const [sixV, setsixV] = useState([]);    // it store the value from the input
+  const [sevenV, setsevenV] = useState([]);   // it store the value from the input
+  const [eightV, seteightV] = useState([]);   // it store the value from the input
   const [firstI, setfirstI] = useState({  // it store first tag data
     Type: "text",
     Id: "",

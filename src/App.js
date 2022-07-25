@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import image from "./img/photo.jpg";
+import img1 from "./img/img1.png";
 const App = () => {
   const [show, setshow] = useState(false); // it show manage the data shows on screen on button click
   const [Data, SetData] = useState(true); // it hide the tag from screen on submit the details
@@ -257,6 +258,7 @@ const App = () => {
     seteight(false);
     setshow(false);
     setdown(false);
+    setshow(false);
   };
 
   const secondfun = () => {       // this condtion show the detail on double click functionalities
@@ -453,8 +455,9 @@ const App = () => {
 
   return (
     <>
+    <img src={img1} alt="Error" style={{ width: 90, height: 55 ,marginLeft:15, borderRadius:5 , backgroundColor:"white"}} />
       <div className="header">
-        <h1>Drag & Drop</h1>
+        <h1 className="heading">Drag & Drop</h1>
         {up && (
           <>
             <button

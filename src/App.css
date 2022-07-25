@@ -6,12 +6,15 @@
 .header {
   background-color: rgb(155, 155, 197);
   display: flex;
-  justify-content: center;
 }
 
 .containers {
   height: 497px;
   display: flex;
+}
+
+.heading {
+  margin-left: 400px;
 }
 
 .first {
@@ -51,7 +54,7 @@ div img {
 }
 
 
-.downloadButton{
+.downloadButton {
   margin-left: 100px;
   margin-top: 10px;
 }

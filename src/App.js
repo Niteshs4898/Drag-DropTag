@@ -6,7 +6,7 @@ const App = () => {
   const [show, setshow] = useState(false); // it show manage the data shows on screen on button click
   const [Data, SetData] = useState(true); // it hide the tag from screen on submit the details
   const [down, setdown] = useState(false); // it show the download data
-  const [up, setup] = useState(false);  // it shows show all and download button
+  const [up, setup] = useState(false); // it shows show all and download button
   const [first, setfirst] = useState(false); // it show the data when it true
   const [second, setsecond] = useState(false); // it show the data when it true
   const [third, setthird] = useState(false); // it show the data when it true
@@ -113,151 +113,190 @@ const App = () => {
   };
 
   const handleFirstSubmit = () => {
-    setshow(true); // it show the tag with details
-    SetData(false); // it shows only tags
-    setfirstV([...firstV, firstI]); // object value store in an arrray
-    setshows([
-      // here append the details in the tag for showing
-      ...shows,
-      <input
-        type="text"
-        id={firstI.Id}
-        className={firstI.Classname}
-        placeholder={firstI.Placeholder}
-      />,
-    ]);
-    setfirstI({
-      // after submit the details will clear
-      Id: "",
-      Classname: "",
-      Placeholder: "",
-    });
+    if (
+      firstI.Id === "" ||
+      firstI.Classname === "" ||
+      firstI.Placeholder === ""
+    ) {
+      alert("please enter all details");
+    } else {
+      setshow(true); // it show the tag with details
+      SetData(false); // it shows only tags
+      setfirstV([...firstV, firstI]); // object value store in an arrray
+      setshows([
+        // here append the details in the tag for showing
+        ...shows,
+        <input
+          type="text"
+          id={firstI.Id}
+          className={firstI.Classname}
+          placeholder={firstI.Placeholder}
+        />,
+      ]);
+      setfirstI({
+        // after submit the details will clear
+        Id: "",
+        Classname: "",
+        Placeholder: "",
+      });
+    }
   };
 
   const handleSecondSubmit = () => {
-    setshow(true); // it show the tag with details
-    SetData(false); // it shows only tags
-    setsecondV([...secondV, secondI]); // object value store in an arrray
-    setshows([
-      // here append the details in the tag for showing
-      ...shows,
-      <button type="submit" id={secondI.Id} className={secondI.Classname}>
-        Buttton
-      </button>,
-    ]);
-    setsecondI({
-      // after submit the details will clear
-      Id: "",
-      Classname: "",
-    });
+    if (secondI.Id === "" || secondI.Classname === "") {
+      alert("please enter all details");
+    } else {
+      setshow(true); // it show the tag with details
+      SetData(false); // it shows only tags
+      setsecondV([...secondV, secondI]); // object value store in an arrray
+      setshows([
+        // here append the details in the tag for showing
+        ...shows,
+        <button type="submit" id={secondI.Id} className={secondI.Classname}>
+          Buttton
+        </button>,
+      ]);
+      setsecondI({
+        // after submit the details will clear
+        Id: "",
+        Classname: "",
+      });
+    }
   };
 
   const handleThirdSubmit = () => {
-    setshow(true); // it show the tag with details
-    SetData(false); // it shows only tags
-    setthirdV([...thirdV, thirdI]); // object value store in an arrray
-    setshows([
-      // here append the details in the tag for showing
-      ...shows,
-      <input
-        type="checkbox"
-        id={thirdI.Id}
-        className={thirdI.Classname}
-        name={thirdI.Name}
-      />,
-    ]);
-    setthirdI({
-      // after submit the details will clear
-      Id: "",
-      Classname: "",
-      Name: "",
-    });
+    if (thirdI.Id === "" || thirdI.Classname === "" || thirdI.Name === "") {
+      alert("please enter all details");
+    } else {
+      setshow(true); // it show the tag with details
+      SetData(false); // it shows only tags
+      setthirdV([...thirdV, thirdI]); // object value store in an arrray
+      setshows([
+        // here append the details in the tag for showing
+        ...shows,
+        <input
+          type="checkbox"
+          id={thirdI.Id}
+          className={thirdI.Classname}
+          name={thirdI.Name}
+        />,
+      ]);
+      setthirdI({
+        // after submit the details will clear
+        Id: "",
+        Classname: "",
+        Name: "",
+      });
+    }
   };
 
   const handleFifthSubmit = () => {
-    setshow(true); // it show the tag with details
-    SetData(false); // it shows only tags
-    setfifthV([...fifthV, fifthI]); // object value store in an arrray
-    setshows([
-      // here append the details in the tag for showing
-      ...shows,
-      <input
-        type="radio"
-        id={fifthI.Id}
-        className={fifthI.Classname}
-        name={fifthI.Name}
-      />,
-    ]);
-    setfifthI({
-      // after submit the details will clear
-      Id: "",
-      Classname: "",
-      Name: "",
-    });
+    if (fifthI.Id === "" || fifthI.Classname === "" || fifthI.Name === "") {
+      alert("please enter all details");
+    } else {
+      setshow(true); // it show the tag with details
+      SetData(false); // it shows only tags
+      setfifthV([...fifthV, fifthI]); // object value store in an arrray
+      setshows([
+        // here append the details in the tag for showing
+        ...shows,
+        <input
+          type="radio"
+          id={fifthI.Id}
+          className={fifthI.Classname}
+          name={fifthI.Name}
+        />,
+      ]);
+      setfifthI({
+        // after submit the details will clear
+        Id: "",
+        Classname: "",
+        Name: "",
+      });
+    }
   };
 
   const handlesixSubmit = () => {
-    setshow(true); // it show the tag with details
-    SetData(false); // it shows only tags
-    setsixV([...sixV, sixI]); // object value store in an arrray
-    setshows([
-      // here append the details in the tag for showing
-      ...shows,
-      <input
-        type="range"
-        id={sixI.Id}
-        name={sixI.Name}
-        min={sixI.Minimum}
-        max={sixI.Maximum}
-      />,
-    ]);
-    setsixI({
-      // after submit the details will clear
-      Id: "",
-      Name: "",
-      Minimum: "",
-      Maximum: "",
-    });
+    if (
+      sixI.Id === "" ||
+      sixI.Name === "" ||
+      sixI.Minimum === "" ||
+      sixI.Maximum === ""
+    ) {
+      alert("please enter all details");
+    } else {
+      setshow(true); // it show the tag with details
+      SetData(false); // it shows only tags
+      setsixV([...sixV, sixI]); // object value store in an arrray
+      setshows([
+        // here append the details in the tag for showing
+        ...shows,
+        <input
+          type="range"
+          id={sixI.Id}
+          name={sixI.Name}
+          min={sixI.Minimum}
+          max={sixI.Maximum}
+        />,
+      ]);
+      setsixI({
+        // after submit the details will clear
+        Id: "",
+        Name: "",
+        Minimum: "",
+        Maximum: "",
+      });
+    }
   };
 
   const handleSevenSubmit = () => {
-    setshow(true); // it show the tag with details
-    SetData(false); // it shows only tags
-    setsevenV([...sevenV, sevenI]); // object value store in an arrray
-    setshows([
-      ...shows,
-      <abbr id={sevenI.Id} title={sevenI.Title}>
-        Abbriviation
-      </abbr>,
-    ]);
-    setsevenI({
-      // after submit the details will clear
-      Title: "",
-      Id: "",
-    });
+    if (sevenI.Id === "" || sevenI.Title === "") {
+      alert("please enter all details");
+    } else {
+      setshow(true); // it show the tag with details
+      SetData(false); // it shows only tags
+      setsevenV([...sevenV, sevenI]); // object value store in an arrray
+      setshows([
+        ...shows,
+        <abbr id={sevenI.Id} title={sevenI.Title}>
+          Abbriviation
+        </abbr>,
+      ]);
+      setsevenI({
+        // after submit the details will clear
+        Title: "",
+        Id: "",
+      });
+    }
   };
 
   const handleEightSubmit = () => {
-    setshow(true); // it show the tag with details
-    SetData(false); // it shows only tags
-    seteightV([...eightV, eightI]); // object value store in an arrray
-    setshows([
-      ...shows,
-      <input
-        type="number"
-        id={eightI.Id}
-        name={eightI.Name}
-        min={eightI.Minimum}
-        max={eightI.Maximum}
-      />,
-    ]);
-    seteightI({
-      // after submit the details will clear
-      Id: "",
-      Name: "",
-      Minimum: "",
-      Maximum: "",
-    });
+    if(eightI.Id==="" || eightI.Name==="" || eightI.Maximum==="" || eightI.Minimum===""){
+      alert("please enter all details");
+    }
+    else{
+      setshow(true); // it show the tag with details
+      SetData(false); // it shows only tags
+      seteightV([...eightV, eightI]); // object value store in an arrray
+      setshows([
+        ...shows,
+        <input
+          type="number"
+          id={eightI.Id}
+          name={eightI.Name}
+          min={eightI.Minimum}
+          max={eightI.Maximum}
+        />,
+      ]);
+      seteightI({
+        // after submit the details will clear
+        Id: "",
+        Name: "",
+        Minimum: "",
+        Maximum: "",
+      });
+    }
+    
   };
 
   const InputDrag = (value) => {

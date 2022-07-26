@@ -5,51 +5,56 @@ import img1 from "./img/img1.png";
 const App = () => {
   const [show, setshow] = useState(false); // it show manage the data shows on screen on button click
   const [Data, SetData] = useState(true); // it hide the tag from screen on submit the details
-  const [down, setdown] = useState(false);  // it show the download data
-  const [up, setup] = useState(false); 
-  const [first, setfirst] = useState(false);  // it show the data when it true
-  const [second, setsecond] = useState(false);  // it show the data when it true
-  const [third, setthird] = useState(false);   // it show the data when it true
-  const [fifth, setfifth] = useState(false);  // it show the data when it true
-  const [six, setsix] = useState(false);     // it show the data when it true
-  const [seven, setseven] = useState(false);   // it show the data when it true
-  const [eight, seteight] = useState(false);  // it show the data when it true
-  const [shows, setshows] = useState([]);   // storing tag with data
+  const [down, setdown] = useState(false); // it show the download data
+  const [up, setup] = useState(false);
+  const [first, setfirst] = useState(false); // it show the data when it true
+  const [second, setsecond] = useState(false); // it show the data when it true
+  const [third, setthird] = useState(false); // it show the data when it true
+  const [fifth, setfifth] = useState(false); // it show the data when it true
+  const [six, setsix] = useState(false); // it show the data when it true
+  const [seven, setseven] = useState(false); // it show the data when it true
+  const [eight, seteight] = useState(false); // it show the data when it true
+  const [shows, setshows] = useState([]); // storing tag with data
   const [set, subSet] = useState([]); // for storing a on tags onDropEnd function
-  const [firstV, setfirstV] = useState([]);  // it store the value from the input
-  const [secondV, setsecondV] = useState([]);  // it store the value from the input
-  const [thirdV, setthirdV] = useState([]);   // it store the value from the input
-  const [fifthV, setfifthV] = useState([]);   // it store the value from the input
-  const [sixV, setsixV] = useState([]);    // it store the value from the input
-  const [sevenV, setsevenV] = useState([]);   // it store the value from the input
-  const [eightV, seteightV] = useState([]);   // it store the value from the input
-  const [firstI, setfirstI] = useState({  // it store first tag data
+  const [firstV, setfirstV] = useState([]); // it store the value from the input
+  const [secondV, setsecondV] = useState([]); // it store the value from the input
+  const [thirdV, setthirdV] = useState([]); // it store the value from the input
+  const [fifthV, setfifthV] = useState([]); // it store the value from the input
+  const [sixV, setsixV] = useState([]); // it store the value from the input
+  const [sevenV, setsevenV] = useState([]); // it store the value from the input
+  const [eightV, seteightV] = useState([]); // it store the value from the input
+  const [firstI, setfirstI] = useState({
+    // it store first tag data
     Type: "text",
     Id: "",
     Classname: "",
     Placeholder: "",
   });
-  const [secondI, setsecondI] = useState({  // it store second tag data
+  const [secondI, setsecondI] = useState({
+    // it store second tag data
     Type: "submit",
     Id: "",
     Classname: "",
   });
 
-  const [thirdI, setthirdI] = useState({  // it store third tag data
+  const [thirdI, setthirdI] = useState({
+    // it store third tag data
     Type: "checkbox",
     Id: "",
     Classname: "",
     Name: "",
   });
 
-  const [fifthI, setfifthI] = useState({ // it store fourth tag data
-    Type: "radio", 
+  const [fifthI, setfifthI] = useState({
+    // it store fourth tag data
+    Type: "radio",
     Id: "",
     Classname: "",
     Name: "",
   });
 
-  const [sixI, setsixI] = useState({ // it store fifth tag data
+  const [sixI, setsixI] = useState({
+    // it store fifth tag data
     Type: "range",
     Id: "",
     Name: "",
@@ -57,52 +62,62 @@ const App = () => {
     Maximum: "",
   });
 
-  const [sevenI, setsevenI] = useState({ // it store sixth tag data
+  const [sevenI, setsevenI] = useState({
+    // it store sixth tag data
     Title: "",
     Id: "",
   });
 
-  const [eightI, seteightI] = useState({  // it store seventh tag data
-    Type: "number",  
+  const [eightI, seteightI] = useState({
+    // it store seventh tag data
+    Type: "number",
     Id: "",
     Name: "",
     Minimum: "",
     Maximum: "",
   });
 
-  const handleFirst = (e) => {        // it append the input details & create a object
+  const handleFirst = (e) => {
+    // it append the input details & create a object
     setfirstI({ ...firstI, [e.target.name]: e.target.value });
   };
 
-  const handleSecond = (e) => {        // it append the input details & create a object
+  const handleSecond = (e) => {
+    // it append the input details & create a object
     setsecondI({ ...secondI, [e.target.name]: e.target.value });
   };
 
-  const handleThird = (e) => {            // it append the input details & create a object
+  const handleThird = (e) => {
+    // it append the input details & create a object
     setthirdI({ ...thirdI, [e.target.name]: e.target.value });
   };
 
-  const handleFifth = (e) => {           // it append the input details & create a object
+  const handleFifth = (e) => {
+    // it append the input details & create a object
     setfifthI({ ...fifthI, [e.target.name]: e.target.value });
   };
 
-  const handleSix = (e) => {              // it append the input details & create a object
+  const handleSix = (e) => {
+    // it append the input details & create a object
     setsixI({ ...sixI, [e.target.name]: e.target.value });
   };
 
-  const handleSeven = (e) => {           // it append the input details & create a object
+  const handleSeven = (e) => {
+    // it append the input details & create a object
     setsevenI({ ...sevenI, [e.target.name]: e.target.value });
   };
 
-  const handleEight = (e) => {            // it append the input details & create a object
+  const handleEight = (e) => {
+    // it append the input details & create a object
     seteightI({ ...eightI, [e.target.name]: e.target.value });
   };
 
-  const handleFirstSubmit = () => {      
-    setshow(true);     // it show the tag with details
-    SetData(false);       // it shows only tags      
-    setfirstV([...firstV, firstI]);    // object value store in an arrray
-    setshows([       // here append the details in the tag for showing 
+  const handleFirstSubmit = () => {
+    setshow(true); // it show the tag with details
+    SetData(false); // it shows only tags
+    setfirstV([...firstV, firstI]); // object value store in an arrray
+    setshows([
+      // here append the details in the tag for showing
       ...shows,
       <input
         type="text"
@@ -111,7 +126,8 @@ const App = () => {
         placeholder={firstI.Placeholder}
       />,
     ]);
-    setfirstI({       // after submit the details will clear
+    setfirstI({
+      // after submit the details will clear
       Id: "",
       Classname: "",
       Placeholder: "",
@@ -119,26 +135,29 @@ const App = () => {
   };
 
   const handleSecondSubmit = () => {
-    setshow(true);    // it show the tag with details
-    SetData(false);   // it shows only tags
-    setsecondV([...secondV, secondI]);   // object value store in an arrray
-    setshows([                       // here append the details in the tag for showing 
+    setshow(true); // it show the tag with details
+    SetData(false); // it shows only tags
+    setsecondV([...secondV, secondI]); // object value store in an arrray
+    setshows([
+      // here append the details in the tag for showing
       ...shows,
       <button type="submit" id={secondI.Id} className={secondI.Classname}>
         Buttton
       </button>,
     ]);
-    setsecondI({         // after submit the details will clear
+    setsecondI({
+      // after submit the details will clear
       Id: "",
       Classname: "",
     });
   };
 
   const handleThirdSubmit = () => {
-    setshow(true);          // it show the tag with details
-    SetData(false);         // it shows only tags
-    setthirdV([...thirdV, thirdI]);      // object value store in an arrray
-    setshows([         // here append the details in the tag for showing 
+    setshow(true); // it show the tag with details
+    SetData(false); // it shows only tags
+    setthirdV([...thirdV, thirdI]); // object value store in an arrray
+    setshows([
+      // here append the details in the tag for showing
       ...shows,
       <input
         type="checkbox"
@@ -147,7 +166,8 @@ const App = () => {
         name={thirdI.Name}
       />,
     ]);
-    setthirdI({              // after submit the details will clear
+    setthirdI({
+      // after submit the details will clear
       Id: "",
       Classname: "",
       Name: "",
@@ -155,10 +175,11 @@ const App = () => {
   };
 
   const handleFifthSubmit = () => {
-    setshow(true);          // it show the tag with details
-    SetData(false);          // it shows only tags
-    setfifthV([...fifthV, fifthI]);       // object value store in an arrray
-    setshows([                         // here append the details in the tag for showing 
+    setshow(true); // it show the tag with details
+    SetData(false); // it shows only tags
+    setfifthV([...fifthV, fifthI]); // object value store in an arrray
+    setshows([
+      // here append the details in the tag for showing
       ...shows,
       <input
         type="radio"
@@ -167,7 +188,8 @@ const App = () => {
         name={fifthI.Name}
       />,
     ]);
-    setfifthI({                  // after submit the details will clear
+    setfifthI({
+      // after submit the details will clear
       Id: "",
       Classname: "",
       Name: "",
@@ -175,10 +197,11 @@ const App = () => {
   };
 
   const handlesixSubmit = () => {
-    setshow(true);            // it show the tag with details
-    SetData(false);           // it shows only tags
-    setsixV([...sixV, sixI]);          // object value store in an arrray
-    setshows([                // here append the details in the tag for showing 
+    setshow(true); // it show the tag with details
+    SetData(false); // it shows only tags
+    setsixV([...sixV, sixI]); // object value store in an arrray
+    setshows([
+      // here append the details in the tag for showing
       ...shows,
       <input
         type="range"
@@ -188,7 +211,8 @@ const App = () => {
         max={sixI.Maximum}
       />,
     ]);
-    setsixI({                  // after submit the details will clear
+    setsixI({
+      // after submit the details will clear
       Id: "",
       Name: "",
       Minimum: "",
@@ -197,25 +221,26 @@ const App = () => {
   };
 
   const handleSevenSubmit = () => {
-    setshow(true);           // it show the tag with details
-    SetData(false);         // it shows only tags
-    setsevenV([...sevenV, sevenI]);         // object value store in an arrray
+    setshow(true); // it show the tag with details
+    SetData(false); // it shows only tags
+    setsevenV([...sevenV, sevenI]); // object value store in an arrray
     setshows([
       ...shows,
       <abbr id={sevenI.Id} title={sevenI.Title}>
         Abbriviation
       </abbr>,
-    ]); 
-    setsevenI({             // after submit the details will clear
+    ]);
+    setsevenI({
+      // after submit the details will clear
       Title: "",
       Id: "",
     });
   };
 
   const handleEightSubmit = () => {
-    setshow(true);            // it show the tag with details
-    SetData(false);           // it shows only tags
-    seteightV([...eightV, eightI]);        // object value store in an arrray
+    setshow(true); // it show the tag with details
+    SetData(false); // it shows only tags
+    seteightV([...eightV, eightI]); // object value store in an arrray
     setshows([
       ...shows,
       <input
@@ -226,7 +251,8 @@ const App = () => {
         max={eightI.Maximum}
       />,
     ]);
-    seteightI({            // after submit the details will clear
+    seteightI({
+      // after submit the details will clear
       Id: "",
       Name: "",
       Minimum: "",
@@ -238,16 +264,17 @@ const App = () => {
     SetData(true);
     setshow(false);
     subSet([...set, value]); // for storing a on tags onDropEnd function.
-    setfirstV([]);   // clear the objects detail for another detail(new tag)
-    setsecondV([]);    // clear the objects detail for another detail(new tag)
-    setthirdV([]);     // clear the objects detail for another detail(new tag)
-    setfifthV([]);    // clear the objects detail for another detail(new tag)
-    setsixV([]);       // clear the objects detail for another detail(new tag)
-    setsevenV([]);       // clear the objects detail for another detail(new tag)
-    seteightV([]);       // clear the objects detail for another detail(new tag)
+    setfirstV([]); // clear the objects detail for another detail(new tag)
+    setsecondV([]); // clear the objects detail for another detail(new tag)
+    setthirdV([]); // clear the objects detail for another detail(new tag)
+    setfifthV([]); // clear the objects detail for another detail(new tag)
+    setsixV([]); // clear the objects detail for another detail(new tag)
+    setsevenV([]); // clear the objects detail for another detail(new tag)
+    seteightV([]); // clear the objects detail for another detail(new tag)
   };
 
-  const firstfun = () => {  // this condtion show the detail on double click functionalities
+  const firstfun = () => {
+    // this condtion show the detail on double click functionalities
     setup(true);
     setfirst(true);
     setsecond(false);
@@ -261,7 +288,8 @@ const App = () => {
     setshow(false);
   };
 
-  const secondfun = () => {       // this condtion show the detail on double click functionalities
+  const secondfun = () => {
+    // this condtion show the detail on double click functionalities
     setup(true);
     setfirst(false);
     setsecond(true);
@@ -274,7 +302,8 @@ const App = () => {
     setdown(false);
   };
 
-  const thirdfun = () => {      // this condtion show the detail on double click functionalities
+  const thirdfun = () => {
+    // this condtion show the detail on double click functionalities
     setup(true);
     setfirst(false);
     setsecond(false);
@@ -287,7 +316,8 @@ const App = () => {
     setdown(false);
   };
 
-  const fifthfun = () => {       // this condtion show the detail on double click functionalities
+  const fifthfun = () => {
+    // this condtion show the detail on double click functionalities
     setup(true);
     setfirst(false);
     setsecond(false);
@@ -299,7 +329,8 @@ const App = () => {
     setshow(false);
     setdown(false);
   };
-  const sixfun = () => {       // this condtion show the detail on double click functionalities
+  const sixfun = () => {
+    // this condtion show the detail on double click functionalities
     setup(true);
     setfirst(false);
     setsecond(false);
@@ -312,7 +343,8 @@ const App = () => {
     setdown(false);
   };
 
-  const sevenfun = () => {      // this condtion show the detail on double click functionalities
+  const sevenfun = () => {
+    // this condtion show the detail on double click functionalities
     setup(true);
     setfirst(false);
     setsecond(false);
@@ -325,7 +357,8 @@ const App = () => {
     setdown(false);
   };
 
-  const Eightfun = () => {     // this condtion show the detail on double click functionalities
+  const Eightfun = () => {
+    // this condtion show the detail on double click functionalities
     setup(true);
     setfirst(false);
     setsecond(false);
@@ -338,7 +371,8 @@ const App = () => {
     setdown(false);
   };
 
-  const handleshow = () => {     // this condtion show the detail on double click functionalities
+  const handleshow = () => {
+    // this condtion show the detail on double click functionalities
     setfirst(false);
     setsecond(false);
     setthird(false);
@@ -350,7 +384,8 @@ const App = () => {
     setdown(false);
   };
 
-  const handleDownload = () => {    // this condtion show the detail on double click functionalities
+  const handleDownload = () => {
+    // this condtion show the detail on double click functionalities
     setfirst(false);
     setsecond(false);
     setthird(false);
@@ -455,7 +490,17 @@ const App = () => {
 
   return (
     <>
-    <img src={img1} alt="Error" style={{ width: 90, height: 55 ,marginLeft:15, borderRadius:5 , backgroundColor:"white"}} />
+      <img
+        src={img1}
+        alt="Error"
+        style={{
+          width: 90,
+          height: 55,
+          marginLeft: 15,
+          borderRadius: 5,
+          backgroundColor: "white",
+        }}
+      />
       <div className="header">
         <h1 className="heading">Drag & Drop</h1>
         {up && (

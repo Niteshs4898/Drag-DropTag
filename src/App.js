@@ -6,7 +6,7 @@ const App = () => {
   const [show, setshow] = useState(false); // it show manage the data shows on screen on button click
   const [Data, SetData] = useState(true); // it hide the tag from screen on submit the details
   const [down, setdown] = useState(false); // it show the download data
-  const [up, setup] = useState(false);
+  const [up, setup] = useState(false);  // it shows show all and download button
   const [first, setfirst] = useState(false); // it show the data when it true
   const [second, setsecond] = useState(false); // it show the data when it true
   const [third, setthird] = useState(false); // it show the data when it true

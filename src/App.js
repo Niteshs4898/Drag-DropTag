@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 import image from "./img/photo.jpg";
-import img1 from "./img/img1.png";
+import one from "./img/one.jpg";
+import three from "./img/three.jpg";
 const App = () => {
   const [show, setshow] = useState(false); // it show manage the data shows on screen on button click
   const [Data, SetData] = useState(true); // it hide the tag from screen on submit the details
@@ -355,7 +356,7 @@ const App = () => {
     setdown(false);
   };
 
-  const fifthfun = () => {
+  const fifthfun = () => {  
     // this condtion show the detail on double click functionalities
     setup(true);
     setfirst(false);
@@ -526,20 +527,21 @@ const App = () => {
   };
 
   // let Allkey = Math.random() * (10.0 - 1.0 + 1.0);
-
   return (
     <>
       <img
-        src={img1}
+        src={one}
         alt="Error"
         style={{
           width: 90,
-          height: 55,
+          height: 50,
           marginLeft: 15,
-          borderRadius: 5,
+          borderRadius: 3,
+          marginTop:5,
           backgroundColor: "white",
         }}
       />
+      <div className="main">
       <div className="header">
         <h1 className="heading">Drag & Drop</h1>
         {up && (
@@ -560,7 +562,7 @@ const App = () => {
         )}
       </div>
       <div className="containers">
-        <div>
+        <div className="firstData">
           <div className="first">
             <input
               placeholder="Input Type Text"
@@ -612,7 +614,7 @@ const App = () => {
           </div>
         </div>
         <div className="second">
-          <img src={image} alt="Error" style={{ width: 788, height: 493 }} />
+          <img src={three} alt="Error" style={{ width: 795, height: 505 }} />
           <div className="abc">
             {Data && (
               <>
@@ -1047,6 +1049,7 @@ const App = () => {
             </>
           )}
         </div>
+      </div>
       </div>
     </>
   );
